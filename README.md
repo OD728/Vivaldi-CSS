@@ -13,6 +13,11 @@ A sleek CSS modification for Vivaldi browser that creates an auto-hiding bookmar
 
 ## 🎥 Demo
 
+![Screenshot](/screenshot.png)
+<div align="center">
+  <img src="demo.gif" alt="Demo">
+</div>
+
 The bookmark bar will:
 1. Stay hidden by default for a clean browsing experience
 2. Smoothly slide down when you hover over the browser header or tabs

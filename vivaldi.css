@@ -82,19 +82,32 @@
   display: none !important;
 }
 
-/* Custom styling for about:blank pages */
-webview[src="about:blank"] {
-  background-color: var(--about-blank-bg-color) !important;
+/* Working approach for about:blank pages - overlay method */
+.tab-content {
+  position: relative;
 }
 
-/* Alternative selector for about:blank pages */
-.webpageview[data-url="about:blank"],
-.webpageview[src="about:blank"] {
+.tab-content:has([src*="about:blank"])::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: var(--about-blank-bg-color) !important;
+  z-index: 999;
+  pointer-events: none;
 }
 
-/* Target the document body in about:blank pages */
-body {
+/* Alternative method - target the webview container */
+.webview-container:has([src*="about:blank"])::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: var(--about-blank-bg-color) !important;
-  color: #ffffff !important;
+  z-index: 999999;
+  pointer-events: none;
 }

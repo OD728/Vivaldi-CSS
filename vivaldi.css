@@ -1,10 +1,11 @@
-﻿:root {
+:root {
   --vivaldi-bookmark-bar-height: 30px;
   --vivaldi-header-height: 34px;
   --bookmark-bar-hide-delay: 1s;
   --bookmark-bar-animation-duration: 0.2s;
   --bookmark-bar-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   --bookmark-bar-z-index: 10000; /* Increased z-index to appear above address bar */
+  --about-blank-bg-color: #11111b; /* Custom background color for about:blank pages */
 }
 
 .bookmark-bar {
@@ -79,4 +80,21 @@
 /* Hide the tab title in horizontal tabs */
 .tab-header .title {
   display: none !important;
+}
+
+/* Custom styling for about:blank pages */
+webview[src="about:blank"] {
+  background-color: var(--about-blank-bg-color) !important;
+}
+
+/* Alternative selector for about:blank pages */
+.webpageview[data-url="about:blank"],
+.webpageview[src="about:blank"] {
+  background-color: var(--about-blank-bg-color) !important;
+}
+
+/* Target the document body in about:blank pages */
+body {
+  background-color: var(--about-blank-bg-color) !important;
+  color: #ffffff !important;
 }

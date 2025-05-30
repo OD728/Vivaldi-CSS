@@ -82,12 +82,20 @@
   display: none !important;
 }
 
-/* Working approach for about:blank pages - overlay method */
-.tab-content {
-  position: relative;
+/* Working methods for about:blank pages - from Vivaldi forum */
+
+/* Method 1: Filter approach (most reliable) */
+webview[src="about:blank"] {
+  filter: brightness(0%) !important;
 }
 
-.tab-content:has([src*="about:blank"])::before {
+/* Method 2: Hide webview to show browser background */
+webview[src="about:blank"] {
+  opacity: 0 !important;
+}
+
+/* Method 3: Custom background overlay for Method 2 */
+.tab-content:has(webview[src="about:blank"])::after {
   content: '';
   position: absolute;
   top: 0;
@@ -95,19 +103,8 @@
   right: 0;
   bottom: 0;
   background-color: var(--about-blank-bg-color) !important;
-  z-index: 999;
+  z-index: 1;
   pointer-events: none;
 }
 
-/* Alternative method - target the webview container */
-.webview-container:has([src*="about:blank"])::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--about-blank-bg-color) !important;
-  z-index: 999999;
-  pointer-events: none;
-}
+/* Note: You may need to refresh (F5) blank tabs after applying this CSS due to Chromium bug */

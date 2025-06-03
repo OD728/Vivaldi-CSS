@@ -2,6 +2,11 @@
 
 A sleek CSS modification for Vivaldi browser that creates an auto-hiding bookmark bar with smooth animations, hover effects, and custom about:blank styling.
 
+  NOTE: This CSS is designed for Vivaldi's tab bar positioned at the TOP.
+  It will NOT work correctly if tabs are positioned on the left, right, or bottom
+  without significant modifications to positioning, dimensions, and animation logic.
+  For other tab positions, a different CSS approach would be required.
+
 ## ✨ Features
 
 - **Auto-hide functionality**: Bookmark bar stays hidden until you need it

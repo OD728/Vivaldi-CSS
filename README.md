@@ -1,5 +1,8 @@
 # Vivaldi Auto-Hide Bookmark Bar
 
+![Version](https://img.shields.io/badge/version-1.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
 A sleek CSS modification for Vivaldi browser that creates an auto-hiding bookmark bar with smooth animations, hover effects, and custom about:blank styling.
 
   NOTE: This CSS is designed for Vivaldi's tab bar positioned at the TOP.
@@ -114,38 +117,6 @@ You can easily customize the behavior by modifying the CSS variables at the top 
 ### About:blank styling not working
 - Ensure you've restarted Vivaldi after applying the CSS changes
 - Try clearing browser cache if the styling doesn't apply immediately
-
-## 📝 Changelog
-
-### v1.1.0 (2025-05-30)
-**Added:**
-- Custom about:blank page styling with dark background (`#11111b`)
-- CSS variable for customizable about:blank background color
-- Multiple selector approaches for better about:blank targeting
-- White text color for better contrast on dark background
-
-**Changed:**
-- Updated README with new customization options
-- Added troubleshooting section for about:blank styling
-
-### v1.0.0 (Initial Release)
-**Added:**
-- Auto-hide bookmark bar functionality
-- Smooth animations with customizable timing
-- Smart hover detection
-- Clean tab design with centered favicons
-- Comprehensive CSS variable system for easy customization
-
-## 🤝 Contributing
-
-Found a bug or have a suggestion? Feel free to:
-- Open an issue
-- Submit a pull request
-- Share your customizations
-
-## 📝 License
-
-This project is licensed under the MIT License - feel free to use and modify as needed.
 
 ## 🙏 Acknowledgments
 
